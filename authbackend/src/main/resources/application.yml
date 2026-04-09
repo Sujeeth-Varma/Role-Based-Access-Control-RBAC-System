@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: authbackend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+jwt:
+  base64key: ${JWT_SECRET}
+  expiration: 172800000 # 2days
+
+cors:
+  allowed-origins: ${FRONTEND_URL}
