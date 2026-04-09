@@ -53,4 +53,9 @@ public class UserService {
         String token = jwtUtils.generateToken(userDetails);
         return new LoginResponse(token);
     }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
 }

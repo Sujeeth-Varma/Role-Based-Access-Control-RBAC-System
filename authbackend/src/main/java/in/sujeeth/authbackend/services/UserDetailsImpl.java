@@ -29,7 +29,8 @@ public class UserDetailsImpl implements UserDetails {
 
     //    bind our custom user object to spring security-defined default user
     public static UserDetailsImpl build(User user) {
-        GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole().toString());
+        // Spring Security's hasRole("ADMIN") expects authority named "ROLE_ADMIN"
+        GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + user.getRole().name());
         return new UserDetailsImpl(
                 user.getId(),
                 user.getUsername(),
