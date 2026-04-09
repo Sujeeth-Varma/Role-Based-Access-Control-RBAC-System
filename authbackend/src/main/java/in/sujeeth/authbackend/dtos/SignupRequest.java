@@ -1,8 +1,6 @@
 package in.sujeeth.authbackend.dtos;
 
-import in.sujeeth.authbackend.entities.Roles;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
