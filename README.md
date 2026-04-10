@@ -1,5 +1,9 @@
 # Auth Assignment
 
+## Demo Video
+
+https://github.com/user-attachments/assets/047e88db-0aa2-420e-b4b3-5ab36ece2e43
+
 A full-stack authentication demo with:
 
 - **Frontend:** React + Vite + TypeScript
